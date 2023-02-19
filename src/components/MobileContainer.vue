@@ -1,7 +1,7 @@
 <template>
 <div id='app'>
             <div id="table-col-1">
-            <div id="image"><img v-bind:src="ImageLink(this.index)"/></div>
+            <div id="image"><img v-bind:src="ImageLink(index)"/></div>
             <div class="button-container">
                 <button @click="previousImage">&lt;</button>
                 <button @click="nextImage">&gt;</button>
