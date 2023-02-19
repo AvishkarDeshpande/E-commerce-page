@@ -50,7 +50,10 @@ export default{
         },
 
         nextImage(){
-            this.index++;         
+            if(this.index<4){
+
+                this.index++;         
+            }
         },
 
         previousImage(){
