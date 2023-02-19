@@ -41,7 +41,7 @@ export default{
     methods:{
 
         showData(){
-            console.log(this.data.images[0]);
+            console.log(this.data.title);
         },
         changeIndex(data){
         this.index=data
