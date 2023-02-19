@@ -42,7 +42,6 @@ export default{
 
         showData(){
             consol.log(this.data);
-            console.log(this.data.title);
         },
         changeIndex(data){
         this.index=data
