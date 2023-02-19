@@ -1,12 +1,12 @@
 <template>
   <div id='app'>
             <div id="table-col-1">
-                <div id="image"><img v-bind:src="GetImageLink(this.index)"/></div>
+                <div id="image"><img :src="this.index"/></div>
                 <div class="grid-container">
-                    <div class="grid-item"><img @click="changeIndex(0)" v-bind:src="GetImageLink(0)"></div>
-                    <div class="grid-item"><img  @click="changeIndex(1)" v-bind:src="GetImageLink(1)"></div>
-                    <div class="grid-item"><img @click="changeIndex(2)" v-bind:src="GetImageLink(2)"></div>
-                    <div class="grid-item"><img @click="changeIndex(3 )" v-bind:src="GetImageLink(3)"></div>
+                    <div class="grid-item"><img @click="changeIndex(Image1)" v-bind:src="Image1"></div>
+                    <div class="grid-item"><img  @click="changeIndex(Image2)" v-bind:src="Image2"></div>
+                    <div class="grid-item"><img @click="changeIndex(Image3)" v-bind:src="Image3"></div>
+                    <div class="grid-item"><img @click="changeIndex(Image4)" v-bind:src="Image4"></div>
                 </div>
             </div>
             <div id="table-col-2">
@@ -27,19 +27,21 @@
 </template>
 
 <script>
+import Image1 from '@/../public/sneakers-1.webp';
+import Image2 from '@/../public/sneakers-2.webp';
+import Image3 from '@/../public/sneakers-3.webp';
+import Image4 from '@/../public/sneakers-4.webp';
 
 export default {
   name: 'Container',
   data(){
         return{
             data: [],
-            images :[
-            "https://www.linkpicture.com/q/1_31.webp",
-            "https://www.linkpicture.com/q/2_19.webp",
-            "https://www.linkpicture.com/q/3_9.webp",
-            "https://www.linkpicture.com/q/4_11.webp"
-            ],
-            index:0,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
+            index:Image1,
             num:0,
         }
     },

@@ -19,7 +19,6 @@
                     <input type="text" class="input-num" :value="num" readonly>
                     <button @click="increment" class="btn plus-btn">+</button>
                 </div>
-                <!-- <button @click="showData">show</button> -->
                 <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
@@ -28,28 +27,23 @@
 
 <script>
 
+import Image1 from '@/../public/sneakers-1.webp';
+import Image2 from '@/../public/sneakers-2.webp';
+import Image3 from '@/../public/sneakers-3.webp';
+import Image4 from '@/../public/sneakers-4.webp';
+
 export default{
 
     name:'MobileContainer',
     data(){
         return{
             data: [],
-            images :[
-            "https://www.linkpicture.com/q/1_31.webp",
-            "https://www.linkpicture.com/q/2_19.webp",
-            "https://www.linkpicture.com/q/3_9.webp",
-            "https://www.linkpicture.com/q/4_11.webp"
-            ],
+            Images:[Image1, Image2, Image3, Image4,],
             index:0,
             num:0,
         }
     },
     methods:{
-
-        showData(){
-            console.log(this.ImageLink(0));
-        },
-
         changeIndex(data){
         this.index=data
         console.log(this.index);     
@@ -57,7 +51,6 @@ export default{
 
         nextImage(){
             this.index++;         
-
         },
 
         previousImage(){
@@ -68,7 +61,6 @@ export default{
 
         increment(){
             this.num++;         
-
         },
 
         decrement(){
@@ -87,8 +79,8 @@ export default{
     computed: {
     ImageLink() {
       return function(index){  
-      if (this.images && this.images.length > 0) {
-        return this.images[index];
+      if (this.Images && this.Images.length > 0) {
+        return this.Images[index];
       }
       return '';
     }
