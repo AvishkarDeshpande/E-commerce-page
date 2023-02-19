@@ -1,7 +1,7 @@
 <template>
 <div id='app'>
             <div id="table-col-1">  
-            <div id="image"><img :src="ImageLink(0)"/></div>
+            <div id="image"><img :src="Images[0]"/></div>
             <div class="button-container">
                 <button @click="previousImage">&lt;</button>
                 <button @click="nextImage">&gt;</button>
