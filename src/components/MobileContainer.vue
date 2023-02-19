@@ -1,12 +1,12 @@
 <template>
 <div id='app'>
-            <div id="table-col-1">
+            <!-- <div id="table-col-1">
             <div id="image"><img v-bind:src="ImageLink(index)"/></div>
             <div class="button-container">
                 <button @click="previousImage">&lt;</button>
                 <button @click="nextImage">&gt;</button>
             </div>
-            </div>
+            </div> -->
             <div id="table-col-2">
                 <h5>SNEAKER COMPANY</h5>
                 <h1>{{data.title}}</h1>
