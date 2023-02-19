@@ -1,7 +1,7 @@
 <template>
 <div id='app'>
             <div id="table-col-1">  
-            <div id="image"><img :src="ImageLink(0)"/></div>
+            <div id="image"><img :src="ImageLink(this.index)"/></div>
             <div class="button-container">
                 <button @click="previousImage">&lt;</button>
                 <button @click="nextImage">&gt;</button>
@@ -19,7 +19,7 @@
                     <input type="text" class="input-num" :value="num" readonly>
                     <button @click="increment" class="btn plus-btn">+</button>
                 </div>
-                <button @click="showData">show</button>
+                <!-- <button @click="showData">show</button> -->
                 <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
@@ -43,23 +43,28 @@ export default{
         showData(){
             console.log(this.ImageLink(0));
         },
+
         changeIndex(data){
         this.index=data
         console.log(this.index);     
         },
+
         nextImage(){
             this.index++;         
 
         },
+
         previousImage(){
             if(this.index>0){
                 this.index--;
             }
         },
+
         increment(){
             this.num++;         
 
         },
+
         decrement(){
             if(this.num>0){
                 this.num--;

@@ -1,5 +1,14 @@
 <template>
   <div id='app'>
+            <div id="table-col-1">
+                <div id="image"><img v-bind:src="firstImageLink(this.index)"/></div>
+                <div class="grid-container">
+                    <div class="grid-item"><img @click="changeIndex(0)" v-bind:src="firstImageLink(0)"></div>
+                    <div class="grid-item"><img  @click="changeIndex(1)" v-bind:src="firstImageLink(1)"></div>
+                    <div class="grid-item"><img @click="changeIndex(2)" v-bind:src="firstImageLink(2)"></div>
+                    <div class="grid-item"><img @click="changeIndex(3 )" v-bind:src="firstImageLink(3)"></div>
+                </div>
+            </div>
             <div id="table-col-2">
                 <h5>SNEAKER COMPANY</h5>
                 <h1>{{data.title}}</h1>
