@@ -68,14 +68,14 @@ export default {
 
     },
     computed: {
-    GetImageLink() {
-      return function(index){  
-      if (this.images && this.images.length > 0) {
-        return this.images[index];
-      }
-      return '';
-    }
-    }
+    // GetImageLink() {
+    //   return function(index){  
+    //   if (this.images && this.images.length > 0) {
+    //     return this.images[index];
+    //   }
+    //   return '';
+    // }
+    // }
 }
 }
 

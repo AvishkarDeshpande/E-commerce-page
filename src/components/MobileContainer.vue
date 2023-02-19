@@ -82,7 +82,7 @@ export default{
       if (this.Images && this.Images.length > 0) {
         return this.Images[index];
       }
-      return '';
+    
     }
     }
 }
