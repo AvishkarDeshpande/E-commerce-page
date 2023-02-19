@@ -67,16 +67,7 @@ export default {
             .catch(err => console.log(err.message))
 
     },
-    computed: {
-    // GetImageLink() {
-    //   return function(index){  
-    //   if (this.images && this.images.length > 0) {
-    //     return this.images[index];
-    //   }
-    //   return '';
-    // }
-    // }
-}
+
 }
 
 </script>
@@ -194,18 +185,20 @@ export default {
 }
 .btn {
   padding: 5px 10px;
-  font-size: 1rem;
+  font-size: 10px;
+  text-align: center;
   background-color: #00000018;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 .input-num {
-  width: 50px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
+  padding: 6px 14px;
   border:none;
   text-align: center;
+  outline: none;
   background-color:#00000018;
 }
 

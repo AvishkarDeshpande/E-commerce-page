@@ -164,20 +164,21 @@ button {
 }
 .btn {
   padding: 5px 10px;
-  font-size: 1rem;
-  background-color: #f5f5f5;
-  color: black;
+  font-size: 10px;
+  text-align: center;
+  background-color: #00000018;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 .input-num {
-  width: 70%;
-  padding: 7px 10px;
+  width: 20px;
+  height: 20px;
+  padding: 6px 14px;
+  border:none;
   text-align: center;
-  border: none;
-  background-color:#f5f5f5;
+  outline: none;
+  background-color:#00000018;
 }
 
 .add-to-cart {
