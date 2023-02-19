@@ -88,6 +88,10 @@ export default{
 
 @media (max-width:1440px){
 
+#table-col-1{
+    width: 100%;
+
+}
 .grid-container{
     display: none;
 }
@@ -120,6 +124,7 @@ button {
 
 #table-col-2 p{
     text-align: center;
+
 }
 
 #table-col-2 h5{
@@ -128,7 +133,6 @@ button {
 }
 
 #table-col-2{    
-    margin-left: 20px;
     width: 100%;
     text-align: center;
     float: left;
