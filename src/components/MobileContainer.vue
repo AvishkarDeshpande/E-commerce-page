@@ -8,6 +8,7 @@
             </div>
             </div> -->
             <div id="table-col-2">
+                <button @click="showData">show</button>
                 <h5>SNEAKER COMPANY</h5>
                 <h1>{{data.title}}</h1>
                 <p>{{data.description}} </p>
@@ -38,6 +39,10 @@ export default{
         }
     },
     methods:{
+
+        showData(){
+            console.log(this.data);
+        },
         changeIndex(data){
         this.index=data
         console.log(this.index);     
