@@ -183,6 +183,7 @@ button {
   text-align: center;
   outline: none;
   background-color:#00000018;
+  border-radius: 3px;
 }
 
 .add-to-cart {

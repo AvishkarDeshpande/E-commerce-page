@@ -199,6 +199,7 @@ export default {
   border:none;
   text-align: center;
   outline: none;
+  border-radius: 3px;
   background-color:#00000018;
 }
 
