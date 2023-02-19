@@ -1,12 +1,12 @@
 <template>
   <div id='app'>
             <div id="table-col-1">
-                <div id="image"><img v-bind:src="firstImageLink(this.index)"/></div>
+                <div id="image"><img v-bind:src="GetImageLink(this.index)"/></div>
                 <div class="grid-container">
-                    <div class="grid-item"><img @click="changeIndex(0)" v-bind:src="firstImageLink(0)"></div>
-                    <div class="grid-item"><img  @click="changeIndex(1)" v-bind:src="firstImageLink(1)"></div>
-                    <div class="grid-item"><img @click="changeIndex(2)" v-bind:src="firstImageLink(2)"></div>
-                    <div class="grid-item"><img @click="changeIndex(3 )" v-bind:src="firstImageLink(3)"></div>
+                    <div class="grid-item"><img @click="changeIndex(0)" v-bind:src="GetImageLink(0)"></div>
+                    <div class="grid-item"><img  @click="changeIndex(1)" v-bind:src="GetImageLink(1)"></div>
+                    <div class="grid-item"><img @click="changeIndex(2)" v-bind:src="GetImageLink(2)"></div>
+                    <div class="grid-item"><img @click="changeIndex(3 )" v-bind:src="GetImageLink(3)"></div>
                 </div>
             </div>
             <div id="table-col-2">
@@ -33,6 +33,12 @@ export default {
   data(){
         return{
             data: [],
+            images :[
+            "https://www.linkpicture.com/q/1_31.webp",
+            "https://www.linkpicture.com/q/2_19.webp",
+            "https://www.linkpicture.com/q/3_9.webp",
+            "https://www.linkpicture.com/q/4_11.webp"
+            ],
             index:0,
             num:0,
         }
@@ -60,10 +66,10 @@ export default {
 
     },
     computed: {
-    firstImageLink() {
+    GetImageLink() {
       return function(index){  
-      if (this.data.images && this.data.images.length > 0) {
-        return this.data.images[index];
+      if (this.images && this.images.length > 0) {
+        return this.images[index];
       }
       return '';
     }

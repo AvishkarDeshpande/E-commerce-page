@@ -34,6 +34,12 @@ export default{
     data(){
         return{
             data: [],
+            images :[
+            "https://www.linkpicture.com/q/1_31.webp",
+            "https://www.linkpicture.com/q/2_19.webp",
+            "https://www.linkpicture.com/q/3_9.webp",
+            "https://www.linkpicture.com/q/4_11.webp"
+            ],
             index:0,
             num:0,
         }
@@ -81,8 +87,8 @@ export default{
     computed: {
     ImageLink() {
       return function(index){  
-      if (this.data.images && this.data.images.length > 0) {
-        return this.data.images[index];
+      if (this.images && this.images.length > 0) {
+        return this.images[index];
       }
       return '';
     }
