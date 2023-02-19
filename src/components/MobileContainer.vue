@@ -8,7 +8,6 @@
             </div>
             </div> -->
             <div id="table-col-2">
-                <button @click="showData">show</button>
                 <h5>SNEAKER COMPANY</h5>
                 <h1>{{data.title}}</h1>
                 <p>{{data.description}} </p>
@@ -20,6 +19,7 @@
                     <input type="text" class="input-num" :value="num" readonly>
                     <button @click="increment" class="btn plus-btn">+</button>
                 </div>
+                <button @click="showData">show</button>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
