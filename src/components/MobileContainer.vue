@@ -1,7 +1,7 @@
 <template>
 <div id='app'>
             <div id="table-col-1">  
-            <div id="image"><img :src="Images[0]"/></div>
+            <div id="image"><img :src="Images[index]"/></div>
             <div class="button-container">
                 <button @click="previousImage">&lt;</button>
                 <button @click="nextImage">&gt;</button>
@@ -76,17 +76,7 @@ export default{
             .catch(err => console.log(err.message))
 
     },
-    computed: {
-    ImageLink() {
-      return function(index){  
-      if (this.Images && this.Images.length > 0) {
-        return this.Images[index];
-      }
-    
     }
-    }
-}
-}
 </script>
 
 <style scoped>
