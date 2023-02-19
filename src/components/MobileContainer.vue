@@ -50,7 +50,7 @@ export default{
         },
 
         nextImage(){
-            if(this.index<4){
+            if(this.index<3){
 
                 this.index++;         
             }
