@@ -1,6 +1,6 @@
 <template>
 <div id='app'>
-            <div id="table-col-1">
+            <div id="table-col-1">  
             <div id="image"><img v-bind:src="ImageLink(0)"/></div>
             <div class="button-container">
                 <button @click="previousImage">&lt;</button>
@@ -41,7 +41,7 @@ export default{
     methods:{
 
         showData(){
-            console.log(this.data.images[0]);
+            console.log(this.ImageLink(0));
         },
         changeIndex(data){
         this.index=data
