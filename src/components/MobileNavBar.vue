@@ -18,13 +18,13 @@ export default {
 
 <style scoped>
 
-@media (min-width: 1100px) {
+@media (min-width: 1440px) {
 
     #nav{
         display: none;
     }
 }
-@media (max-width:800px){
+@media (max-width:1440px){
 
 #nav{
     background-color:rgb(114, 108, 108);

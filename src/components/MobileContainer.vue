@@ -86,7 +86,7 @@ export default{
 }
 }
 
-@media (max-width:800px){
+@media (max-width:1440px){
 
 .grid-container{
     display: none;
@@ -95,7 +95,7 @@ export default{
 #image img{
     margin: 68px 0px;
     height: 350px;
-    width:100% ;
+    width:100%;
     position: relative;
 }
 
@@ -118,15 +118,19 @@ button {
   cursor: pointer;
 }
 
+#table-col-2 p{
+    text-align: center;
+}
+
 #table-col-2 h5{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: left;
     color: rgb(243, 161, 8);
 }
 
 #table-col-2{    
     margin-left: 20px;
-    width: 300px;
+    width: 100%;
+    text-align: center;
     float: left;
 
 }

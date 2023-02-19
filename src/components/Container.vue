@@ -220,7 +220,7 @@ export default {
 
 }
 
-@media (max-width:800px){
+@media (max-width:1440px){
 #app{
     display: none;
 }
