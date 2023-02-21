@@ -3,10 +3,10 @@
             <div id="table-col-1">
                 <div id="image"><img :src="this.index"/></div>
                 <div class="grid-container">
-                    <div class="grid-item"><img @click="changeIndex(Image1)" v-bind:src="Image1"></div>
-                    <div class="grid-item"><img  @click="changeIndex(Image2)" v-bind:src="Image2"></div>
-                    <div class="grid-item"><img @click="changeIndex(Image3)" v-bind:src="Image3"></div>
-                    <div class="grid-item"><img @click="changeIndex(Image4)" v-bind:src="Image4"></div>
+                    <div class="grid-item"><img @mouseover="changeIndex($event,Image1)" v-bind:src="Image1"></div>
+                    <div class="grid-item"><img  @mouseover="changeIndex($event,Image2)" v-bind:src="Image2"></div>
+                    <div class="grid-item"><img @mouseover="changeIndex($event,Image3)" v-bind:src="Image3"></div>
+                    <div class="grid-item"><img @mouseover="changeIndex($event,Image4)" v-bind:src="Image4"></div>
                 </div>
             </div>
             <div id="table-col-2">
@@ -17,9 +17,9 @@
                 <a id="discount" href="#">{{data.discount_percent}}%</a>
                 <a id="actual_price" href="#">${{data.price}}</a>
                 <div class="productAdd">
-                    <button @click="decrement" class="btn minus-btn">-</button>
+                    <button @click="decrement" class="btn">-</button>
                     <input type="text" class="input-num" :value="num" readonly>
-                    <button @click="increment" class="btn plus-btn">+</button>
+                    <button @click="increment" class="btn">+</button>
                 </div>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
@@ -46,14 +46,17 @@ export default {
         }
     },
     methods:{
-        changeIndex(data){
-        this.index=data
+        changeIndex(e,data){
+        this.index=data;
+        console.log(e);
         console.log(this.index);     
         },
+
         increment(){
             this.num++;         
 
         },
+
         decrement(){
             if(this.num>0){
                 this.num--;

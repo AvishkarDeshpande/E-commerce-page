@@ -1,7 +1,7 @@
 <template>
   <NavBar/>
   <MobileNavBar/>
-  <Container/>
+  <Container/> 
   <MobileContainer/>
   
 </template>

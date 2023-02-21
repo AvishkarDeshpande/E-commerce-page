@@ -15,9 +15,9 @@
                 <a id="discount" href="#">{{data.discount_percent}}%</a>
                 <a id="actual_price" href="#">${{data.price}}</a>
                 <div class="productAdd">
-                    <button @click="decrement" class="btn minus-btn">-</button>
+                    <button @click="decrement" class="btn">-</button>
                     <input type="text" class="input-num" :value="num" readonly>
-                    <button @click="increment" class="btn plus-btn">+</button>
+                    <button @click="increment" class="btn">+</button>
                 </div>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
@@ -177,6 +177,7 @@ button {
   padding: 5px 10px;
   font-size: 10px;
   text-align: center;
+  color: black;
   background-color: #00000018;
   border: none;
   cursor: pointer;
