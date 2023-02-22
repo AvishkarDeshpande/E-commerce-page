@@ -1,7 +1,7 @@
 <template>
 <div id='app'>
             <div id="table-col-1">  
-            <div id="image"><img :src="Images[index]"/></div>
+            <div id="image"><img v-if="data.images" :src="data.images[index]"/></div>
             <div class="button-container">
                 <button @click="previousImage">&lt;</button>
                 <button @click="nextImage">&gt;</button>
@@ -27,18 +27,12 @@
 
 <script>
 
-import Image1 from '@/../public/sneakers-1.webp';
-import Image2 from '@/../public/sneakers-2.webp';
-import Image3 from '@/../public/sneakers-3.webp';
-import Image4 from '@/../public/sneakers-4.webp';
-
 export default{
 
     name:'MobileContainer',
     data(){
         return{
             data: [],
-            Images:[Image1, Image2, Image3, Image4,],
             index:0,
             num:0,
         }
@@ -104,11 +98,13 @@ export default{
     height: 350px;
     width:100%;
     position: relative;
+    overflow: scroll;
 }
 
 .button-container {
+
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 0;
   right: 0;
   transform: translateY(-50%);
@@ -127,6 +123,7 @@ button {
 
 #table-col-2 p{
     text-align: center;
+    width:100%;
 
 }
 

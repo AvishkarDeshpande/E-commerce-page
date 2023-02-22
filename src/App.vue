@@ -3,10 +3,10 @@
   <MobileNavBar/>
   <Container/> 
   <MobileContainer/>
-  
+  <notifications/>
 </template>
 
-<script>
+<script>  
 import Container from './components/Container.vue'
 import MobileContainer from './components/MobileContainer.vue'
 import NavBar from './components/NavBar.vue'

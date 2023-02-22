@@ -1,12 +1,12 @@
 <template>
   <div id='app'>
             <div id="table-col-1">
-                <div id="image"><img :src="this.index"/></div>
+                <div id="image"><img v-if="data.images" :src="data.images[this.index]"/></div>
                 <div class="grid-container">
-                    <div class="grid-item"><img @mouseover="changeIndex($event,Image1)" v-bind:src="Image1"></div>
-                    <div class="grid-item"><img  @mouseover="changeIndex($event,Image2)" v-bind:src="Image2"></div>
-                    <div class="grid-item"><img @mouseover="changeIndex($event,Image3)" v-bind:src="Image3"></div>
-                    <div class="grid-item"><img @mouseover="changeIndex($event,Image4)" v-bind:src="Image4"></div>
+                    <div class="grid-item"><img v-if="data.images" @click="changeIndex(0)" v-bind:src="data.images[0]"></div>
+                    <div class="grid-item"><img v-if="data.images"  @click="changeIndex(1)" v-bind:src="data.images[1]"></div>
+                    <div class="grid-item"><img v-if="data.images" @click="changeIndex(2)" v-bind:src="data.images[2]"></div>
+                    <div class="grid-item"><img v-if="data.images" @click="changeIndex(3)" v-bind:src="data.images[3]"></div>
                 </div>
             </div>
             <div id="table-col-2">
@@ -17,9 +17,9 @@
                 <a id="discount" href="#">{{data.discount_percent}}%</a>
                 <a id="actual_price" href="#">${{data.price}}</a>
                 <div class="productAdd">
-                    <button @click="decrement" class="btn">-</button>
+                    <button @click="decrement" class="btn minus-btn">-</button>
                     <input type="text" class="input-num" :value="num" readonly>
-                    <button @click="increment" class="btn">+</button>
+                    <button @click="increment" class="btn plus-btn">+</button>
                 </div>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
@@ -27,28 +27,19 @@
 </template>
 
 <script>
-import Image1 from '@/../public/sneakers-1.webp';
-import Image2 from '@/../public/sneakers-2.webp';
-import Image3 from '@/../public/sneakers-3.webp';
-import Image4 from '@/../public/sneakers-4.webp';
 
 export default {
   name: 'Container',
   data(){
         return{
             data: [],
-            Image1,
-            Image2,
-            Image3,
-            Image4,
-            index:Image1,
             num:0,
+            index:0,
         }
     },
     methods:{
-        changeIndex(e,data){
-        this.index=data;
-        console.log(e);
+        changeIndex(data){
+        this.index=data
         console.log(this.index);     
         },
 
@@ -56,7 +47,7 @@ export default {
             this.num++;         
 
         },
-
+        
         decrement(){
             if(this.num>0){
                 this.num--;
@@ -70,7 +61,6 @@ export default {
             .catch(err => console.log(err.message))
 
     },
-
 }
 
 </script>

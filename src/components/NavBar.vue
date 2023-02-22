@@ -46,19 +46,23 @@ h3{
     margin-left: 10em;
     overflow: auto;
 }
+
 .navbar li{
     float:left;
     list-style: none; 
     margin: 40px 20px;
 }
+
 .navbar li a{
     padding: 3px 3px;
     text-decoration: none;
     color: rgba(88, 88, 88, 0.849);
-        }
+}
+
 .navbar li a:hover{
     color: red
 }
+
 }
 
 @media (min-width:800) and (max-width:1100px){
@@ -66,12 +70,15 @@ h3{
 li{
     display:none;
 } 
+
 }
 
 @media (max-width:1440px){
+
 .nav{
     display: none;
 }
+
 }
 
 </style>

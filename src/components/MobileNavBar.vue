@@ -43,8 +43,7 @@ export default {
     display: inline;
     font-size: 25px;
     margin:20px;
-    color: whitesmoke;
-    
+    color: whitesmoke; 
 }
 
 #cart{
